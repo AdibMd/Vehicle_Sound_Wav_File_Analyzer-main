@@ -1,0 +1,202 @@
+body{
+  /* background-color: #bcc0c533; */
+  background-color: #d5e8ec1a;
+  background-image:url('../img/124226.jpg');
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-position:center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gallery-body {
+  background-image:url('../img/124129.jpg');
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-position:center;
+  text-align: center;
+  display:block;
+}
+
+.spec-body {
+  background-image:url('../img/124166.png');
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-position:center;
+  text-align: center;
+  display:block;
+}
+
+.upload-body {
+   background-image:url('../img/124129.jpg');
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-position:center;
+  display:block;
+}
+
+.utm-form {
+background: #fff;
+padding:30px;
+margin:45px auto;
+max-width:50%;
+width:100%;
+
+}
+
+.utm-form .form-group {
+margin: 15px 0;
+}
+
+.gallery-show {
+    display:flex;
+    justify-content:center;
+    margin:45px 30px;
+}
+
+h1 {
+
+}
+
+.center-job {
+    text-align:center !important;
+}
+
+.utm-wrap {
+    text-align:center;
+    background-color: #fff;
+    padding:30px;
+}
+
+#recordings {
+    list-style:none;
+}
+
+.utm-button {
+    margin: 30px;
+}
+
+.utm-button button, #recordings a, .utm-gallery a, input[type=file], .utm-form button {
+    background: #A8A9AD;
+    color: #000;
+    border: 1px solid #A8A9AD;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight:bold;
+}
+
+#recordings {
+padding-left:0;
+}
+
+#recordings a {
+    display:block;
+    width: 100%;
+    max-width: 25%;
+    margin: 30px auto;
+}
+
+.utm-button button:hover , #recordings a:hover, .utm-gallery a:hover , .utm-form button:hover {
+    background: #000;
+    color: #A8A9AD;
+    text-decoration: none;
+    border: 1px solid #000;
+}
+
+.gallery-table{
+    padding:30px;
+    background:#fff;
+    text-align: left;
+}
+
+.gallery-table th,
+.gallery-table td {
+border:1px solid #000;
+padding: 10px 15px;
+}
+
+.gallery-table thead {
+background:#f5f5f5;
+}
+
+.bglight {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: green;
+}
+
+.last-item-hide {
+display:none;
+}
+
+.last-item-hide:last-child {
+display: table-row;
+}
+
+.gallery-btn {
+    text-align: center;
+    margin: 45px 30px;
+}
+
+.gallery-btn a {
+text-decoration:none;
+}
+
+.upload-body {
+display:block;
+}
+
+.upload-body h1 {
+text-align:center;
+}
+
+.li-left{
+  float: left;
+}
+
+.li-right{
+  float: right;
+}
+
+.base-a {
+    display: block;
+    color: white;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: 10px;
+    text-align: center;
+    text-decoration: none;
+
+}
+
+.base-a:hover {
+    background-color: #ff9988;
+    text-decoration: none;
+}
+.base-a-img {
+    display: block;
+    color: white;
+    margin-left: 10px;
+    padding: 2px;
+
+    text-align: center;
+    text-decoration: none;
+}
+.home-list{
+  list-style-type: none;
+  margin-left: : 100px;;
+}
+
+.home-a{
+  color: #969847;
+}
+
+.home-a:hover {
+  text-decoration: none;
+  color: #F00;
+}

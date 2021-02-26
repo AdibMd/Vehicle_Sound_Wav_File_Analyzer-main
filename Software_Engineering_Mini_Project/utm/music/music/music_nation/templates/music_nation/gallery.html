@@ -1,0 +1,192 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gallery</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'music_nation/css/music_nation.css' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+</head>
+<body class="gallery-body">
+
+ <h1 style="color:#fff;">Sound File Gallery</h1>
+
+ <div class="gallery-btn">
+     <div class="utm-gallery text-left">
+         <a href="/">Back</a>
+     </div>
+     <div>
+
+     </div>
+ </div>
+
+ <div class="gallery-show">
+      <table class="gallery-table">
+    <thead>
+      <tr>
+        <th>Recorder</th>
+        <th>Name</th>
+        <th>File</th>
+        <th>Spectrogram</th>
+      </tr>
+    </thead>
+    <tbody>
+
+<!--      {% for getdata in SendForm %}-->
+
+<!--          <tr>-->
+<!--            <td>Recorder ID: {{ getdata.id }}</td>-->
+<!--            <td>-->
+<!--                {{ getdata.spectrogram }}-->
+<!--                {% if getdata.spectrogram < getdata.length %}-->
+<!--                <b>1</b> {{ getdata.length  }}-->
+<!--                {% else %}-->
+<!--                <b>2341</b> {{ getdata.length }}-->
+<!--                {% endif %}-->
+<!--            </td>-->
+<!--            <td>-->
+<!--                <audio controls>-->
+<!--                  <source src="/media/{{ getdata.file }}" type="audio/wav">-->
+<!--                  Your browser does not support the audio element.-->
+<!--                </audio>-->
+<!--            </td>-->
+<!--            <td>-->
+<!--                <a href="SoundSpectrogram{{ forloop.counter0 }}" target="_blank">Click to Show</a>-->
+<!--            </td>-->
+<!--          </tr>-->
+<!--      {% endfor %}-->
+
+       <tr>
+            <td>Recorder ID: 1001</td>
+            <td>
+                Honda Civic
+            </td>
+            <td>
+                <audio controls>
+                  <source src="../media/user_15/Honda_Civic_RVycsHT.wav" type="audio/wav">
+                  Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td>
+                <a href="SoundSpectrogram0">Click to Show</a>
+            </td>
+       </tr>
+
+        <tr>
+            <td>Recorder ID: 1002</td>
+            <td>
+                Ford Mustang
+            </td>
+            <td>
+                <audio controls>
+                  <source src="../media/user_15/Mustang_CE5fpeb.wav" type="audio/wav">
+                  Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td>
+                <a href="SoundSpectrogram1">Click to Show</a>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Recorder ID: 1003</td>
+            <td>
+                Mercedes X Class
+            </td>
+            <td>
+                <audio controls>
+                  <source src="/media/user_15/mercedes_x-class.wav" type="audio/wav">
+                  Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td>
+                <a href="SoundSpectrogram2">Click to Show</a>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Recorder ID: 1004</td>
+            <td>
+                Ford Raptor
+            </td>
+            <td>
+                <audio controls>
+                  <source src="/media/user_15/ford_raptor.wav" type="audio/wav">
+                  Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td>
+                <a href="SoundSpectrogram3">Click to Show</a>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Recorder ID: 1005</td>
+            <td>
+                Ford Everest
+            </td>
+            <td>
+                <audio controls>
+                  <source src="/media/user_15/Ford_everest.wav" type="audio/wav">
+                  Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td>
+                <a href="SoundSpectrogram4" target="_blank">Click to Show</a>
+            </td>
+        </tr>
+
+
+        {% for getdata in SendForm %}
+
+        <tr class="last-item-hide">
+            <td>Recorder ID: 1006</td>
+            <td>
+                {{ getdata.spectrogram }}
+            </td>
+            <td>
+                <audio controls>
+                  <source src="/media/{{ getdata.file }}" type="audio/wav">
+                  Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td>
+                <a href="SoundSpectrogram5" target="_blank">Click to Show</a>
+            </td>
+        </tr>
+
+        {% endfor %}
+
+    </tbody>
+  </table>
+<!--       {% for item in SendForm  %}-->
+<!--      {{ item.spectrogram }}{{ item.file }}-->
+<!--      {% endfor %}-->
+ </div><br/>
+
+<div style="display:block;text-align:center;">
+            <img src="data:image/png;base64,{{ data }}" alt="" height="1000" ,width="1000"/>
+        </div>
+
+ <div class="center-job" style="text-align:center;display:none;">
+        {% for getdata in ContactForm %}
+        <div>
+            {{ getdata.cc }}
+
+<!--            <button onclick="playAudio()" type="button">-->
+<!--                    {{ getdata.file }}-->
+<!--            </button>-->
+            <div style="display:block;">
+            <audio controls>
+              <source src="/media/{{ getdata.file }}" type="audio/wav">
+            Your browser does not support the audio element.
+            </audio>
+            </div>
+
+        </div>
+        {% endfor %}
+    </div>
+
+</body>
+</html>

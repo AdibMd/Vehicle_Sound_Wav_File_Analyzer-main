@@ -1,0 +1,110 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gallery</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'music_nation/css/music_nation.css' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+</head>
+<body class="spec-body">
+
+ <h1 style="color:#fff;">Vehicle Specification</h1>
+
+ <div class="gallery-btn">
+     <div class="utm-gallery text-left">
+         <a href="/">Back</a>
+     </div>
+ </div>
+
+ <div class="gallery-show">
+      <table class="gallery-table" style="margin-right:15px;">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Model</th>
+        <th>Price</th>
+        <th>C.C.</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      {% for getdata in ContactForm %}
+
+          <tr>
+            <td>{{ getdata.type }}</td>
+            <td>
+               {{ getdata.model }}
+            </td>
+            <td>
+               {{ getdata.price }}
+            </td>
+            <td>
+               {{ getdata.cc }}
+            </td>
+          </tr>
+      {% endfor %}
+
+
+    </tbody>
+  </table>
+
+     <table class="gallery-table">
+    <thead>
+      <tr>
+        <th>Brand</th>
+        <th>Group</th>
+        <th>Continent</th>
+
+      </tr>
+    </thead>
+    <tbody>
+
+      {% for getdata in VehicleSpec %}
+
+          <tr>
+            <td>{{ getdata.brand_name }}</td>
+            <td>
+               {{ getdata.group_name }}
+            </td>
+            <td>
+               {{ getdata.continent }}
+            </td>
+
+          </tr>
+      {% endfor %}
+
+
+    </tbody>
+  </table>
+<!--       {% for item in SendForm  %}-->
+<!--      {{ item.spectrogram }}{{ item.file }}-->
+<!--      {% endfor %}-->
+ </div><br/>
+
+<div style="display:block;text-align:center;">
+            <img src="data:image/png;base64,{{ data }}" alt="" height="1000" ,width="1000"/>
+        </div>
+
+ <div class="center-job" style="text-align:center;display:none;">
+        {% for getdata in ContactForm %}
+        <div>
+            {{ getdata.cc }}
+
+<!--            <button onclick="playAudio()" type="button">-->
+<!--                    {{ getdata.file }}-->
+<!--            </button>-->
+            <div style="display:block;">
+            <audio controls>
+              <source src="/media/{{ getdata.file }}" type="audio/wav">
+            Your browser does not support the audio element.
+            </audio>
+            </div>
+
+        </div>
+        {% endfor %}
+    </div>
+
+</body>
+</html>

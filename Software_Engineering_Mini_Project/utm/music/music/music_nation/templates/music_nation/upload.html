@@ -1,0 +1,48 @@
+{% load static %}
+<!--<!doctype html>-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Upload Audio</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'music_nation/css/music_nation.css' %}">
+</head>
+<body class="upload-body">
+
+     <h1 style="color:#fff;">Upload Spectrogram File</h1>
+
+     <div class="gallery-btn">
+     <div class="utm-gallery text-left">
+         <a href="/">Back</a>
+     </div>
+     <div>
+
+     </div>
+ </div>
+
+<div class="utm-form">
+
+
+
+    <form method="POST" class="post-form" action="#" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="container">
+            <div class="form-group" style="display:flex;">
+                <label class="control-label col-sm-2">Spectrogram Name:&nbsp;&nbsp;</label>
+                <div class="col-sm-10">
+                <input type="text" name="spectrogram" value=""/>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2">Upload File</label>
+                <input type="file" name="file" id="fileToUpload">
+            <!--    <input type="submit" value="Upload Image" name="submit">-->
+            </div>
+            <div class="form-group">
+            <button type="submit" class="btn btn-default">Submit</button>
+            </div>
+        </div>
+    </form>
+  </div>
+
+</body>
+</html>
